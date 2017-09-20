@@ -4,7 +4,7 @@ set -e
 
 SOURCES_DIR=/tmp/artifacts
 
-DISTRIBUTION_VERSION="amq-broker-7.0.1"
+DISTRIBUTION_VERSION="amq-broker-7.0.2"
 
 unzip -q "$SOURCES_DIR/${DISTRIBUTION_VERSION}-bin.zip"
 mv $DISTRIBUTION_VERSION $AMQ_HOME
