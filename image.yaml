@@ -4,6 +4,13 @@ name: "jboss-amq-7/amq70"
 description: "Red Hat JBoss AMQ 7.0 container image"
 version: "7.0.2"
 from: "jboss/openjdk18-rhel7:1.0"
+labels:
+    - name: "org.jboss.product"
+      value: "amq"
+    - name: "org.jboss.product.version"
+      value: "7.0.2.GA"
+    - name: "org.jboss.product.amq.version"
+      value: "7.0.2.GA"
 envs:
     - name: "JBOSS_PRODUCT"
       value: "AMQ"
