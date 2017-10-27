@@ -28,6 +28,13 @@ artifacts:
     - path: amq-broker-7.1.0-bin.zip
       description: "https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=53281&product=jboss.amq&version=7.1.0&downloadType=distributions"
       md5: 2512d5da913b39ddf1fdb39eeb2ac6c6
+ports:
+    - value: 8161
+    - value: 61616
+    - value: 5672
+    - value: 5445
+    - value: 1883
+    - value: 61613
 run:
       user: 185
       cmd:
