@@ -1,23 +1,23 @@
 schema_version: 1
 
-name: "jboss-amq-7/amq70"
-description: "Red Hat JBoss AMQ 7.0 container image"
-version: "7.0.2"
+name: "jboss-amq-7/amq71"
+description: "Red Hat JBoss AMQ 7.1 container image"
+version: "7.1.0"
 from: "jboss/openjdk18-rhel7:1.0"
 labels:
     - name: "org.jboss.product"
       value: "amq"
     - name: "org.jboss.product.version"
-      value: "7.0.2.GA"
+      value: "7.1.0.GA"
     - name: "org.jboss.product.amq.version"
-      value: "7.0.2.GA"
+      value: "7.1.0.GA"
 envs:
     - name: "JBOSS_PRODUCT"
       value: "AMQ"
     - name: "JBOSS_AMQ_VERSION"
-      value: "7.0.2.GA"
+      value: "7.1.0.GA"
     - name: "PRODUCT_VERSION"
-      value: "7.0.2.GA"
+      value: "7.1.0.GA"
     - name: "AMQ_HOME"
       value: "/opt/amq"
 modules:
@@ -25,9 +25,9 @@ modules:
           - name: amq-install
           - name: amq-chown
 artifacts:
-    - path: amq-broker-7.0.2-bin.zip
-      description: "https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=53281&product=jboss.amq&version=7.0.2&downloadType=distributions"
-      md5: 4f2cd051370f69bacc0560cc339a8da8
+    - path: amq-broker-7.1.0-bin.zip
+      description: "https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=53281&product=jboss.amq&version=7.1.0&downloadType=distributions"
+      md5: 2512d5da913b39ddf1fdb39eeb2ac6c6
 run:
       user: 185
       cmd:
@@ -35,4 +35,4 @@ run:
 osbs:
       repository:
             name: jboss-amq-7-docker
-            branch: jb-amq70
+            branch: jb-amq71
