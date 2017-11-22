@@ -21,6 +21,8 @@ envs:
     - name: "AMQ_HOME"
       value: "/opt/amq"
 modules:
+      repositories:
+          - path: modules
       install:
           - name: amq-install
           - name: amq-chown
