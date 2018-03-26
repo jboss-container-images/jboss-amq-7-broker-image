@@ -1,38 +1,65 @@
 schema_version: 1
 
-name: "jboss-amq-7/amq70"
-description: "Red Hat JBoss AMQ 7.0 container image"
-version: "7.0.2"
-from: "jboss/openjdk18-rhel7:1.0"
+name: "amq-broker-7/amq-broker-71"
+description: "Red Hat JBoss AMQ 7.1 container image"
+version: "1.0"
+from: "jboss/openjdk18-rhel7:1.1"
 labels:
+    - name: "com.redhat.component"
+      value: "amq-7-broker-71-container"
     - name: "org.jboss.product"
       value: "amq"
     - name: "org.jboss.product.version"
-      value: "7.0.2.GA"
+      value: "7.1.0.GA"
     - name: "org.jboss.product.amq.version"
-      value: "7.0.2.GA"
+      value: "7.1.0.GA"
 envs:
     - name: "JBOSS_PRODUCT"
       value: "AMQ"
+      description: "The product name"
     - name: "JBOSS_AMQ_VERSION"
-      value: "7.0.2.GA"
+      value: "7.1.0.GA"
     - name: "PRODUCT_VERSION"
-      value: "7.0.2.GA"
+      value: "7.1.0.GA"
     - name: "AMQ_HOME"
       value: "/opt/amq"
+    - name: "AMQ_NAME"
+      value: "broker"
+    - name: "AMQ_USER"
+    - name: "AMQ_PASSWORD"
+    - name: "AMQ_ROLE"
+      value: "admin"
+    - name: "AMQ_CLUSTERED"
+      value: "false"
+    - name: "AMQ_CLUSTER_USER"
+      value: "cluster_user"
+    - name: "AMQ_CLUSTER_PASSWORD"
+      value: "cluster_password"
+    - name: "AMQ_REPLICATED"
+      value: "true"
+    - name: "AMQ_SLAVE"
+      value: "false"
+    - name: "AMQ_EXTRA_ARGS"
+      value: ""
+    - name: "AMQ_RESET_CONFIG"
+      value: "false"
+
+packages:
+    repositories:
+        - jboss-os
+    install:
+        - hostname
+
 modules:
       install:
-          - name: amq-install
-          - name: amq-chown
-artifacts:
-    - path: amq-broker-7.0.2-bin.zip
-      description: "https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=53281&product=jboss.amq&version=7.0.2&downloadType=distributions"
-      md5: 4f2cd051370f69bacc0560cc339a8da8
+          - name: amq.broker71.install
+          - name: amq.broker71.chown
 run:
       user: 185
       cmd:
-          - "/opt/amq/bin/runscript.sh"
+          - "/opt/amq/bin/launch.sh"
 osbs:
       repository:
-            name: jboss-amq-7-docker
-            branch: jb-amq70
+            name: containers/amq-7-broker
+            branch: rh-amq-broker-7.1-rhel-7
+            

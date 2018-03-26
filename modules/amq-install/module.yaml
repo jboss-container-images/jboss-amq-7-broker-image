@@ -1,5 +1,11 @@
 schema_version: 1
 
-name: amq-install
+name: amq.broker71.install
+
+artifacts:
+    - path: amq-broker-7.1.0-bin.zip
+      description: "https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=53281&product=jboss.amq&version=7.0.2&downloadType=distributions"
+      md5: 4acc7f83878361a782fe56d99c251ce3
+
 execute:
     - script: install.sh
