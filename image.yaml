@@ -1,26 +1,26 @@
 schema_version: 1
 
-name: "amq-broker-7/amq-broker-71"
-description: "Red Hat JBoss AMQ 7.1 container image"
-version: "1.0"
+name: "amq-broker-7/amq-broker-72"
+description: "Red Hat JBoss AMQ 7.2 container image"
+version: "1.1"
 from: "jboss/openjdk18-rhel7:1.1"
 labels:
     - name: "com.redhat.component"
-      value: "amq-7-broker-71-container"
+      value: "amq-7-broker-72-container"
     - name: "org.jboss.product"
       value: "amq"
     - name: "org.jboss.product.version"
-      value: "7.1.0.GA"
+      value: "7.2.0.GA"
     - name: "org.jboss.product.amq.version"
-      value: "7.1.0.GA"
+      value: "7.2.0.GA"
 envs:
     - name: "JBOSS_PRODUCT"
       value: "AMQ"
       description: "The product name"
     - name: "JBOSS_AMQ_VERSION"
-      value: "7.1.0.GA"
+      value: "7.2.0.GA"
     - name: "PRODUCT_VERSION"
-      value: "7.1.0.GA"
+      value: "7.2.0.GA"
     - name: "AMQ_HOME"
       value: "/opt/amq"
     - name: "AMQ_NAME"
@@ -52,8 +52,8 @@ packages:
 
 modules:
       install:
-          - name: amq.broker71.install
-          - name: amq.broker71.chown
+          - name: amq.broker72.install
+          - name: amq.broker72.chown
 run:
       user: 185
       cmd:
@@ -61,5 +61,5 @@ run:
 osbs:
       repository:
             name: containers/amq-7-broker
-            branch: rh-amq-broker-7.1-rhel-7
+            branch: rh-amq-broker-7.2-rhel-7
             
