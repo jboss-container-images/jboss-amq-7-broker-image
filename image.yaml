@@ -51,6 +51,13 @@ packages:
         - hostname
 
 modules:
+      repositories:
+          - name: cct_module
+            git:
+                  url: https://github.com/jboss-openshift/cct_module.git
+                  ref: sprint-22
+          - path: modules
+
       install:
           - name: amq.broker72.install
           - name: amq.broker72.chown
