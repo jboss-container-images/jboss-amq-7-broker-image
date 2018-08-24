@@ -13,6 +13,10 @@ labels:
       value: "7.2.0.GA"
     - name: "org.jboss.product.amq.version"
       value: "7.2.0.GA"
+    - name: "io.k8s.display-name"
+      value: "Red Hat AMQ Broker 7.2"
+    - name: "maintainer"
+      value: "rkieley@redhat.com"
 envs:
     - name: "JBOSS_PRODUCT"
       value: "AMQ"
