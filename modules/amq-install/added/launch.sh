@@ -20,12 +20,6 @@ function configure() {
         if [ "$AMQ_CLUSTERED" = "true" ]; then
             echo "Broker will be clustered"
             AMQ_ARGS="$AMQ_ARGS --clustered --cluster-user=$AMQ_CLUSTER_USER --cluster-password=$AMQ_CLUSTER_PASSWORD"
-            if [ "$AMQ_REPLICATED" = "true" ]; then
-                AMQ_ARGS="$AMQ_ARGS --replicated"
-            fi
-            if [ "$AMQ_SLAVE" = "true" ]; then
-                AMQ_ARGS="$AMQ_ARGS --slave"
-            fi
         fi
         if [ "$AMQ_RESET_CONFIG" ]; then
             AMQ_ARGS="$AMQ_ARGS --force"
