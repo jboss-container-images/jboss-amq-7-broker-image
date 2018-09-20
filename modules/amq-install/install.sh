@@ -6,9 +6,9 @@ SOURCES_DIR=/tmp/artifacts
 SCRIPT_DIR=$(dirname $0)
 ADDED_DIR=${SCRIPT_DIR}/added
 
-DISTRIBUTION_VERSION="amq-broker-7.2.0"
+DISTRIBUTION_VERSION="amq-broker-7.2.1"
 
-unzip -q "$SOURCES_DIR/${DISTRIBUTION_VERSION}-bin.zip"
+unzip -q "$SOURCES_DIR/${DISTRIBUTION_VERSION}.CR5-bin.zip"
 mv $DISTRIBUTION_VERSION $AMQ_HOME
 
 cp $ADDED_DIR/launch.sh $AMQ_HOME/bin
