@@ -3,9 +3,9 @@ schema_version: 1
 name: amq.broker72.install
 
 artifacts:
-    - path: amq-broker-7.2.1-bin.zip
+    - path: amq-broker-7.2.2-bin.zip
       description: "https://access.redhat.com/jbossnetwork/restricted/softwareDownload.html?softwareId=61741"
-      md5: 0e55de7ed2cfff10c4655ad9a6d79469
+      md5: 77a3cb4f8f72d5b49a74ee1ee030ee29
 
 execute:
     - script: install.sh
