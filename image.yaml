@@ -3,7 +3,7 @@ schema_version: 1
 name: "amq-broker-7/amq-broker-72"
 description: "Red Hat JBoss AMQ 7.2.3 container image"
 version: "1.2"
-from: "jboss/openjdk18-rhel7:1.1-33"
+from: "rhel7:7.6-122"
 labels:
     - name: "com.redhat.component"
       value: "amq-7-broker-72-container"
@@ -59,6 +59,9 @@ modules:
           - path: modules
 
       install:
+          - name: jboss.container.user
+          - name: jboss.container.openjdk.jdk
+            version: "8"
           - name: amq.broker72.install
           - name: amq.broker72.chown
 run:
