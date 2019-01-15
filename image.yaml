@@ -49,6 +49,7 @@ packages:
         - jboss-os
     install:
         - hostname
+        - systemd
 
 modules:
       repositories:
