@@ -1,7 +1,7 @@
 schema_version: 1
 
 name: "amq-broker-7/amq-broker-72"
-description: "Red Hat JBoss AMQ 7.2.2 container image"
+description: "Red Hat JBoss AMQ 7.2.2-HF1 container image"
 version: "1.1"
 from: "jboss/openjdk18-rhel7:1.1-33"
 labels:
@@ -10,11 +10,11 @@ labels:
     - name: "org.jboss.product"
       value: "amq"
     - name: "org.jboss.product.version"
-      value: "7.2.2"
+      value: "7.2.2-HF1"
     - name: "org.jboss.product.amq.version"
-      value: "7.2.2"
+      value: "7.2.2-HF1"
     - name: "io.k8s.display-name"
-      value: "Red Hat AMQ Broker 7.2.2"
+      value: "Red Hat AMQ Broker 7.2.2-HF1"
     - name: "maintainer"
       value: "rkieley@redhat.com"
 envs:
@@ -22,9 +22,9 @@ envs:
       value: "AMQ"
       description: "The product name"
     - name: "JBOSS_AMQ_VERSION"
-      value: "7.2.2"
+      value: "7.2.2-HF1"
     - name: "PRODUCT_VERSION"
-      value: "7.2.2"
+      value: "7.2.2-HF1"
     - name: "AMQ_HOME"
       value: "/opt/amq"
     - name: "AMQ_NAME"
