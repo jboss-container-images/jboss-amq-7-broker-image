@@ -1,6 +1,4 @@
-# Red Hat AMQ 7.2.3 container image
-
-NOTE: Extends link:https://github.com/jboss-container-images/jboss-openjdk-image[JBoss OpenJDK image]
+# Red Hat AMQ 7.2.4 container image
 
 # License
 
