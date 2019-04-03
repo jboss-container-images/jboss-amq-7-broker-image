@@ -1,4 +1,4 @@
-# Red Hat AMQ 7.2.4 container image
+# Red Hat AMQ 7.3.0 container image
 
 # License
 
