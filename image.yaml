@@ -3,7 +3,7 @@ schema_version: 1
 name: "amq-broker-7/amq-broker-72"
 description: "Red Hat JBoss AMQ 7.2.4 container image"
 version: "1.3"
-from: "rhel7:7.6-151.1550575774"
+from: "rhel7:7.6-252"
 labels:
     - name: "com.redhat.component"
       value: "amq-7-broker-72-container"
