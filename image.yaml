@@ -50,6 +50,7 @@ packages:
     install:
         - hostname
         - systemd
+        - libaio
 
 modules:
       repositories:
