@@ -45,11 +45,8 @@ envs:
       value: "false"
 
 packages:
-    repositories:
-        - jboss-os
     install:
         - hostname
-        - systemd
         - libaio
 
 modules:
