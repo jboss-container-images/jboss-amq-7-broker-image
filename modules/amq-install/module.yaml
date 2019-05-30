@@ -5,6 +5,6 @@ name: amq.broker74.install
 artifacts:
     - path: amq-broker-7.4.0-bin.zip
       description: "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?product=jboss.amq.broker&downloadType=patches&version=7.4.0"
-      md5: e0db72a69d767e8e134d256745e821f7
+      md5: 3ee819fabd9c5b27060b3483b7966131
 execute:
     - script: install.sh
