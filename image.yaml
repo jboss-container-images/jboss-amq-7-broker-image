@@ -6,7 +6,7 @@ version: "7.4"
 from: "ubi7:7.6-123"
 labels:
     - name: "com.redhat.component"
-      value: "amq-7-broker-74-container"
+      value: "amq-broker-container"
     - name: "org.jboss.product"
       value: "amq"
     - name: "org.jboss.product.version"
