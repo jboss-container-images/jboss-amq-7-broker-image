@@ -1,4 +1,4 @@
-# Red Hat AMQ Broker 7.4.0 container image
+# Red Hat AMQ Broker 7.4.1 container image
 
 # License
 
