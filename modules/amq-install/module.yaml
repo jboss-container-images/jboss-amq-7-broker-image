@@ -1,6 +1,6 @@
 schema_version: 1
 
-name: amq.broker74.install
+name: amq.broker75.install
 
 artifacts:
     - path: amq-broker-7.4.0-bin.zip
