@@ -19,7 +19,7 @@ function configure() {
 		fi
         if [ "$AMQ_CLUSTERED" = "true" ]; then
             echo "Broker will be clustered"
-            AMQ_ARGS="$AMQ_ARGS --clustered --cluster-user=$AMQ_CLUSTER_USER --cluster-password=$AMQ_CLUSTER_PASSWORD"
+            AMQ_ARGS="$AMQ_ARGS --clustered --cluster-user $AMQ_CLUSTER_USER --cluster-password $AMQ_CLUSTER_PASSWORD"
         fi
         if [ "$AMQ_RESET_CONFIG" ]; then
             AMQ_ARGS="$AMQ_ARGS --force"
@@ -30,10 +30,10 @@ function configure() {
 
         PRINT_ARGS="${AMQ_ARGS/--password $AMQ_PASSWORD/--password XXXXX}"
         PRINT_ARGS="${PRINT_ARGS/--user $AMQ_USER/--user XXXXX}"
-        PRINT_ARGS="${PRINT_ARGS/--cluster-user=$AMQ_CLUSTER_USER/--cluster-user=XXXXX}"
-        PRINT_ARGS="${PRINT_ARGS/--cluster-password=$AMQ_CLUSTER_PASSWORD/--cluster-password=XXXXX}"
-        PRINT_ARGS="${PRINT_ARGS/--ssl-key-password=$AMQ_KEYSTORE_PASSWORD/--ssl-key-password=XXXXX}"
-        PRINT_ARGS="${PRINT_ARGS/--ssl-trust-password=$AMQ_TRUSTSTORE_PASSWORD/--ssl-trust-password=XXXXX}"
+        PRINT_ARGS="${PRINT_ARGS/--cluster-user $AMQ_CLUSTER_USER/--cluster-user XXXXX}"
+        PRINT_ARGS="${PRINT_ARGS/--cluster-password $AMQ_CLUSTER_PASSWORD/--cluster-password XXXXX}"
+        PRINT_ARGS="${PRINT_ARGS/--ssl-key-password $AMQ_KEYSTORE_PASSWORD/--ssl-key-password XXXXX}"
+        PRINT_ARGS="${PRINT_ARGS/--ssl-trust-password $AMQ_TRUSTSTORE_PASSWORD/--ssl-trust-password XXXXX}"
 
         echo "Creating Broker with args $PRINT_ARGS"
 		$AMQ_HOME/bin/artemis create broker $AMQ_ARGS
