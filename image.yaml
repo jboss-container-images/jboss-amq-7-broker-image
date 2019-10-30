@@ -45,7 +45,6 @@ envs:
       value: "false"
 
 packages:
-    content_sets_file: content_sets.yml
     install:
         - hostname
         - libaio
@@ -57,7 +56,7 @@ modules:
           - name: cct_module
             git:
                  url: https://github.com/artemiscloud/cct_module.git
-                 ref: ENTMQBR-3039
+                 ref: sprint-26
 
       install:
           - name: jboss.container.user
