@@ -52,16 +52,20 @@ packages:
 
 modules:
       repositories:
+          - path: modules
           - name: cct_module
             git:
                  url: https://github.com/artemiscloud/cct_module.git
                  ref: ENTMQBR-3039
-          - path: modules
+          - name: cct_module_j9
+            git:
+                 url: https://github.com/artemiscloud/cct_module.git
+                 ref: openj9
 
       install:
           - name: jboss.container.user
           - name: jboss.container.openjdk.jdk
-            version: "8"
+            version: "openj9-11"
           - name: amq.broker75.install
           - name: amq.broker75.chown
 run:
@@ -72,4 +76,10 @@ osbs:
       repository:
             name: containers/amq-broker
             branch: rh-amq-broker-7.5-dev-rhel-7
+
+#     configuration:
+#         platforms:
+#             only:
+#                 - x86_64
+#                 - s390x
 
