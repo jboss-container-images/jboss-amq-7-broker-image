@@ -1,6 +1,7 @@
 schema_version: 1
 
 name: amq.broker75.install
+version: 1.0
 
 artifacts:
     - name: amq-broker-7.5.0-bin.zip
