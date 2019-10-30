@@ -1,5 +1,7 @@
 schema_version: 1
 
 name: amq.broker75.chown
+version: 1.0
+
 execute:
     - script: install.sh

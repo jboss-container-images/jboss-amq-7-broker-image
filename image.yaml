@@ -3,7 +3,7 @@ schema_version: 1
 name: "amq-broker-7/amq-broker-75"
 description: "Red Hat JBoss AMQ 7.5.0 container image"
 version: "7.5"
-from: "ubi7:7.7-140"
+from: "registry.access.redhat.com/ubi8:8.0-208"
 labels:
     - name: "com.redhat.component"
       value: "amq-broker-container"
@@ -48,14 +48,14 @@ packages:
     install:
         - hostname
         - libaio
-        - python
+        - python2
 
 modules:
       repositories:
           - name: cct_module
             git:
-                  url: https://github.com/jboss-openshift/cct_module.git
-                  ref: sprint-26
+                 url: https://github.com/artemiscloud/cct_module.git
+                 ref: ENTMQBR-3039
           - path: modules
 
       install:
