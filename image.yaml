@@ -72,4 +72,3 @@ osbs:
       repository:
             name: containers/amq-broker
             branch: rh-amq-broker-7.5-dev-rhel-7
-
