@@ -46,7 +46,7 @@ osbs:
 ##        pulp_repos: true
   repository:
     name: containers/amq-broker
-    branch: private-rkieley-rh-broker-7.5-rhel-8
+    branch: private-rkieley-rh-amq-broker-7.5-rhel-8
 
 #packages:
 # use the following extra override to build:
