@@ -1,7 +1,7 @@
 schema_version: 1
 
 from: "registry.access.redhat.com/ubi8:8.0-208"
-name: &name "amq-broker-7/amq-broker-75-rhel8"
+name: &name "amq-broker-7/amq-broker-75"
 version: &version "7.5"
 
 labels:
