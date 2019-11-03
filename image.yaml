@@ -3,7 +3,7 @@ schema_version: 1
 name: "amq-broker-7/amq-broker-75"
 description: "Red Hat JBoss AMQ 7.5.0 container image"
 version: "7.5"
-from: "registry.access.redhat.com/ubi8:8.0-208"
+from: "ubi7:7.7-140"
 labels:
     - name: "com.redhat.component"
       value: "amq-broker-container"
@@ -52,20 +52,16 @@ packages:
 
 modules:
       repositories:
-          - path: modules
           - name: cct_module
             git:
-                 url: https://github.com/artemiscloud/cct_module.git
-                 ref: ENTMQBR-3039
-          - name: cct_module_j9
-            git:
-                 url: https://github.com/artemiscloud/cct_module.git
-                 ref: openj9
+                  url: https://github.com/jboss-openshift/cct_module.git
+                  ref: sprint-26
+          - path: modules
 
       install:
           - name: jboss.container.user
           - name: jboss.container.openjdk.jdk
-            version: "openj9-11"
+            version: "8"
           - name: amq.broker75.install
           - name: amq.broker75.chown
 run:
@@ -76,10 +72,4 @@ osbs:
       repository:
             name: containers/amq-broker
             branch: rh-amq-broker-7.5-dev-rhel-7
-
-#     configuration:
-#         platforms:
-#             only:
-#                 - x86_64
-#                 - s390x
 

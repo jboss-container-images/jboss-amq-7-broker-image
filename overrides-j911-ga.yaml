@@ -1,0 +1,59 @@
+schema_version: 1
+
+from: "registry.access.redhat.com/ubi8:8.0-208"
+name: &name "amq-broker-7/amq-broker-75-rhel8"
+version: &version "7.5"
+
+labels:
+- name: "com.redhat.component"
+  value: "amq-broker-container"
+
+envs:
+- name: "JBOSS_IMAGE_NAME"
+  value: *name
+- name: "JBOSS_IMAGE_VERSION"
+  value: *version
+
+modules:
+      repositories:
+          - path: modules
+          - name: cct_module
+            git:
+                 url: https://github.com/artemiscloud/cct_module.git
+                 ref: ENTMQBR-3039
+          - name: cct_module_j9
+            git:
+                 url: https://github.com/artemiscloud/cct_module.git
+                 ref: openj9
+
+      install:
+          - name: jboss.container.user
+          - name: jboss.container.openjdk.jdk
+            version: "openj9-11"
+          - name: amq.broker75.install
+          - name: amq.broker75.chown
+#- name: jboss.container.java.rm-openjdk
+
+osbs:
+  #koji_target: jb-rhel-8-newarches-container-candidate #koji_target not available in cekit 2.2.7
+  configuration:
+    container:
+      platforms:
+        only:
+          - x86_64
+          - s390x
+##      compose:
+##        pulp_repos: true
+  repository:
+    name: containers/amq-broker
+    branch: private-rkieley-rh-broker-7.5-rhel-8
+
+#packages:
+# use the following extra override to build:
+# # --overrides '{"packages": {"repositories": [{"name": "openj9", "url": {"repository": "http://internal/openj9.repo"}}]}}'
+#   repositories:
+#       - name: scl
+#             rpm: ~
+#                 - name: openj9
+#                       id: openj9
+#                         manager: dnf
