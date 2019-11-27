@@ -1,12 +1,12 @@
 schema_version: 1
 
-from: "registry-proxy.engineering.redhat.com/ubi8:8.0-208"
-name: &name "amq-broker-7/amq-broker-75-rhel8"
+from: "registry-proxy.engineering.redhat.com/ubi8:8.1-277"
+name: &name "amq-broker-7/amq-broker-75-openj9-11-rhel8"
 version: &version "7.5"
 
 labels:
 - name: "com.redhat.component"
-  value: "amq-broker-rhel8-container"
+  value: "amq-broker-7.5-openj9-11-rhel8-container"
 
 envs:
 - name: "JBOSS_IMAGE_NAME"
@@ -20,7 +20,7 @@ modules:
           - name: cct_module
             git:
                  url: https://github.com/artemiscloud/cct_module.git
-                 ref: ENTMQBR-3039
+                 ref: 0.38.0-amq
           - name: cct_module_j9
             git:
                  url: https://github.com/artemiscloud/cct_module.git
@@ -40,13 +40,12 @@ osbs:
     container:
       platforms:
         only:
-          - x86_64
           - s390x
 ##      compose:
 ##        pulp_repos: true
   repository:
     name: containers/amq-broker
-    branch: rh-amq-broker-7.5-dev-rhel-8
+    branch: amq-broker-7.5-openj9-11-rhel8
 
 #packages:
 # use the following extra override to build:
