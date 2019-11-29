@@ -23,8 +23,8 @@ modules:
                  ref: 0.38.0-amq
           - name: cct_module_j9
             git:
-                 url: https://github.com/artemiscloud/cct_module.git
-                 ref: openj9
+                 url: https://github.com/jboss-openshift/cct_module.git
+                 ref: 0.39.0
 
       install:
           - name: jboss.container.user
@@ -32,27 +32,20 @@ modules:
             version: "openj9-11"
           - name: amq.broker75.install
           - name: amq.broker75.chown
-#- name: jboss.container.java.rm-openjdk
 
 osbs:
-  #koji_target: jb-rhel-8-newarches-container-candidate #koji_target not available in cekit 2.2.7
   configuration:
     container:
       platforms:
         only:
           - s390x
-##      compose:
-##        pulp_repos: true
+      compose:
+        pulp_repos: true
+        packages:
+          - java-11-openj9-devel
+        signing_intent: release
+        # used for inheritance of yum repos and ODCS composes from baseimage build
+        inherit: true
   repository:
     name: containers/amq-broker
     branch: amq-broker-7.5-openj9-11-rhel8
-
-#packages:
-# use the following extra override to build:
-# # --overrides '{"packages": {"repositories": [{"name": "openj9", "url": {"repository": "http://internal/openj9.repo"}}]}}'
-#   repositories:
-#       - name: scl
-#             rpm: ~
-#                 - name: openj9
-#                       id: openj9
-#                         manager: dnf
