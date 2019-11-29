@@ -6,7 +6,7 @@ version: &version "7.5"
 
 labels:
 - name: "com.redhat.component"
-  value: "amq-broker-7.5-openj9-11-rhel8-container"
+  value: "amq-broker-openj9-11-rhel8-container"
 
 envs:
 - name: "JBOSS_IMAGE_NAME"
