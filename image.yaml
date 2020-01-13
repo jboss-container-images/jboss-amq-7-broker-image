@@ -3,7 +3,7 @@ schema_version: 1
 name: "amq-broker-7/amq-broker-76"
 description: "Red Hat JBoss AMQ 7.6.0 container image"
 version: "7.6"
-from: "ubi7:7.7-214.1575996166"
+from: "ubi7/ubi:7.7-214.1575996166"
 labels:
     - name: "com.redhat.component"
       value: "amq-broker-container"
@@ -71,5 +71,5 @@ run:
 osbs:
       repository:
             name: containers/amq-broker
-            branch: rh-amq-broker-7.5-dev-rhel-7
+            branch: rh-amq-broker-7.6-dev-rhel-7
 
