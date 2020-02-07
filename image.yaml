@@ -54,8 +54,8 @@ modules:
       repositories:
           - name: cct_module
             git:
-                  url: https://github.com/jboss-openshift/cct_module.git
-                  ref: sprint-26
+                  url: https://github.com/artemiscloud/cct_module.git
+                  ref: 0.38.0-amq
           - path: modules
 
       install:
