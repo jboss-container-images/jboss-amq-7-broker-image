@@ -3,10 +3,10 @@ schema_version: 1
 name: "amq-broker-7/amq-broker-76"
 description: "Red Hat JBoss AMQ 7.6.0 container image"
 version: "7.6"
-from: "ubi8:8.1-397"
+from: "ubi7:7.7-310"
 labels:
     - name: "com.redhat.component"
-      value: "amq-broker-rhel8-container"
+      value: "amq-broker-container"
     - name: "org.jboss.product"
       value: "amq"
     - name: "org.jboss.product.version"
@@ -48,7 +48,7 @@ packages:
     install:
         - hostname
         - libaio
-        - python2
+        - python
 
 modules:
       repositories:
@@ -68,8 +68,4 @@ run:
       user: 185
       cmd:
           - "/opt/amq/bin/launch.sh"
-osbs:
-      repository:
-            name: containers/amq-broker
-            branch: rh-amq-broker-7.6-dev-rhel-7
 

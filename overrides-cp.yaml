@@ -1,6 +1,18 @@
 packages:
       content_sets_file: content_sets.yml
 osbs:
-      repository:
-            name: containers/amq-broker
-            branch: amq-broker-7.6-rhel-8
+  configuration:
+    container:
+      platforms:
+        only:
+          - x86_64
+      compose:
+        pulp_repos: true
+        packages:
+          - java-1.8.0-openjdk-devel
+        signing_intent: release
+        # used for inheritance of yum repos and ODCS composes from baseimage build
+        inherit: true
+  repository:
+    name: containers/amq-broker
+    branch: amq-broker-7.6-rhel-7

@@ -15,4 +15,4 @@ osbs:
         inherit: true
   repository:
     name: containers/amq-broker
-    branch: amq-broker-7.6-rhel-8
+    branch: amq-broker-7.6-rhel-7
