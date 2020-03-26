@@ -1,6 +1,6 @@
 schema_version: 1
 
-from: "registry-proxy.engineering.redhat.com/ubi8:8.1-277"
+from: "registry-proxy.engineering.redhat.com/ubi8:8.1-406"
 name: &name "amq-broker-7/amq-broker-75-openj9-11-rhel8"
 version: &version "7.5"
 
@@ -39,6 +39,7 @@ osbs:
       platforms:
         only:
           - s390x
+          #- x86_64
       compose:
         pulp_repos: true
         packages:
