@@ -40,6 +40,7 @@ osbs:
         only:
           - s390x
           #- x86_64
+          - ppc64le
       compose:
         pulp_repos: true
         packages:
