@@ -2,6 +2,8 @@
 # Installs the AMQ distribution into the filesystem.
 set -e
 
+AMQ_HOME=/opt/amq
+
 SOURCES_DIR=/tmp/artifacts
 SCRIPT_DIR=$(dirname $0)
 ADDED_DIR=${SCRIPT_DIR}/added
