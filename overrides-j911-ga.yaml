@@ -1,6 +1,6 @@
 schema_version: 1
 
-from: "registry-proxy.engineering.redhat.com/rh-osbs/ubi8:8-released"
+from: "registry.redhat.io/ubi8/ubi:latest"
 name: &name "amq-broker-7/amq-broker-77-openj9-11-rhel8"
 version: &version "7.7"
 
