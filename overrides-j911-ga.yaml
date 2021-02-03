@@ -20,11 +20,7 @@ modules:
           - name: cct_module
             git:
                  url: https://github.com/artemiscloud/cct_module.git
-                 ref: 0.38.0-amq
-          - name: cct_module_j9
-            git:
-                 url: https://github.com/jboss-openshift/cct_module.git
-                 ref: 0.39.0
+                 ref: 0.38.0-amq-multiarch
 
       install:
           - name: jboss.container.user
