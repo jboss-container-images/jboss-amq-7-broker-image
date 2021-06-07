@@ -5,7 +5,6 @@
 compose:
   # used for inheritance of yum repos and ODCS composes from baseimage build
   inherit: true
-  packages:
   signing_intent: release
   pulp_repos: true
 platforms:
