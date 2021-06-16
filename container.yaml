@@ -16,4 +16,4 @@ platforms:
   - ppc64le
 image_build_method: imagebuilder
 tags:
-- "7.8.2.CR4"
+- "7.8.2.CR5"
