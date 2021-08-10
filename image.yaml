@@ -1,20 +1,20 @@
 schema_version: 1
 
-name: "amq-broker-7/amq-broker-78"
-description: "Red Hat JBoss AMQ 7.8.2 container image"
-version: "7.8"
-from: "ubi7:7.9-405"
+name: "amq-broker-7/amq-broker-79"
+description: "Red Hat JBoss AMQ 7.9.2 container image"
+version: "7.9"
+from: "ubi7:7.9-441"
 labels:
     - name: "com.redhat.component"
       value: "amq-broker-container"
     - name: "org.jboss.product"
       value: "amq"
     - name: "org.jboss.product.version"
-      value: "7.8.2"
+      value: "7.9.0"
     - name: "org.jboss.product.amq.version"
-      value: "7.8.2"
+      value: "7.9.0"
     - name: "io.k8s.display-name"
-      value: "Red Hat AMQ Broker 7.8.2"
+      value: "Red Hat AMQ Broker 7.9.0"
     - name: "maintainer"
       value: "rkieley@redhat.com"
 envs:
@@ -22,9 +22,9 @@ envs:
       value: "AMQ"
       description: "The product name"
     - name: "JBOSS_AMQ_VERSION"
-      value: "7.8.2"
+      value: "7.9.0"
     - name: "PRODUCT_VERSION"
-      value: "7.8.2"
+      value: "7.9.0"
     - name: "AMQ_HOME"
       value: "/opt/amq"
     - name: "AMQ_NAME"
@@ -62,8 +62,8 @@ modules:
           - name: jboss.container.user
           - name: jboss.container.openjdk.jdk
             version: "8"
-          - name: amq.broker78.install
-          - name: amq.broker78.chown
+          - name: amq.broker79.install
+          - name: amq.broker79.chown
 run:
       user: 185
       cmd:
