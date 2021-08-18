@@ -36,4 +36,4 @@ osbs:
     container_file: container.yaml
   repository:
     name: containers/amq-broker
-    branch: amq-broker-7.9-openj9-11-rhel8
+    branch: amq-broker-7.9-openj9-11-rhel-8
