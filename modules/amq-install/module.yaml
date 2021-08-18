@@ -6,7 +6,7 @@ version: 1.3
 artifacts:
     - name: amq-broker-7.9.0-bin.zip
       target: amq-broker-7.9.0-bin.zip
-      description: "http://download.eng.bos.redhat.com/brewroot/packages/org.jboss.rh-messaging.amq-amq-broker-parent/7.9.0.CR1_redhat_00002/1/maven/org/jboss/rh-messaging/amq/amq-broker/7.9.0.CR1-redhat-00002/amq-broker-7.9.0.CR1-redhat-00002-bin.zip"
+      description: "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?product=jboss.amq.broker&downloadType=patches&version=7.9.0"
       md5: d1878564cba78a3da5e95e42bc1e00c8
 execute:
     - script: install.sh
