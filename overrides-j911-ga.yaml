@@ -1,8 +1,8 @@
 schema_version: 1
 
 from: "registry.redhat.io/ubi8/ubi:latest"
-name: &name "amq-broker-7/amq-broker-78-openj9-11-rhel8"
-version: &version "7.8"
+name: &name "amq-broker-7/amq-broker-79-openj9-11-rhel8"
+version: &version "7.9"
 
 labels:
 - name: "com.redhat.component"
@@ -26,8 +26,8 @@ modules:
           - name: jboss.container.user
           - name: jboss.container.openjdk.jdk
             version: "openj9-11"
-          - name: amq.broker78.install
-          - name: amq.broker78.chown
+          - name: amq.broker79.install
+          - name: amq.broker79.chown
 packages:
       content_sets_file: content_sets_ubi8.yml
 
@@ -36,4 +36,4 @@ osbs:
     container_file: container.yaml
   repository:
     name: containers/amq-broker
-    branch: amq-broker-7.8-openj9-11-rhel8
+    branch: amq-broker-7.9-openj9-11-rhel8
