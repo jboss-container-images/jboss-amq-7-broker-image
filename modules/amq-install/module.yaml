@@ -7,6 +7,6 @@ artifacts:
     - name: amq-broker-7.9.0-bin.zip
       target: amq-broker-7.9.0-bin.zip
       description: "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?product=jboss.amq.broker&downloadType=patches&version=7.9.0"
-      md5: 95e3da9748c7eb5b4e107650b4bb862b
+      md5: 4035d723b01c6f549557a8a1824370bc
 execute:
     - script: install.sh
