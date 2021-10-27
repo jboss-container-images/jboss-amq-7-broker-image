@@ -19,13 +19,13 @@ modules:
           - path: modules
           - name: cct_module
             git:
-                 url: https://github.com/artemiscloud/cct_module.git
-                 ref: 0.38.0-amq-multiarch
+                 url: https://github.com/levivic/cct_module.git
+                 ref: tag-0.38.0-amq-testbranch
 
       install:
           - name: jboss.container.user
           - name: jboss.container.openjdk.jdk
-            version: "openj9-11"
+            version: "semeru-11-open"
           - name: amq.broker78.install
           - name: amq.broker78.chown
 packages:
