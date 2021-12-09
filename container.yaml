@@ -14,4 +14,6 @@ platforms:
 image_build_method: imagebuilder
 tags:
 - "7.8.3.CR4"
+- "7.8.3.CR4-Patch-3148"
+
 
