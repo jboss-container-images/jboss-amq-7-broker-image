@@ -6,7 +6,7 @@ compose:
   # used for inheritance of yum repos and ODCS composes from baseimage build
   inherit: true
   packages:
-  - java-11-openj9-devel
+  - ibm-semeru-open-11-jdk
   signing_intent: release
   pulp_repos: true
 platforms:
@@ -16,4 +16,5 @@ platforms:
   - ppc64le
 image_build_method: imagebuilder
 tags:
-- "7.9.0.CR6"
+- "7.9.3.CR1"
+- "7.9.3.CON.1.GA"
