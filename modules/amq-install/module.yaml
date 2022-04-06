@@ -4,9 +4,9 @@ name: amq.broker78.install
 
 version: 1.3
 artifacts:
-    - name: amq-broker-7.8.5-bin.zip
-      target: amq-broker-7.8.5-bin.zip
-      description: "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?product=jboss.amq.broker&downloadType=patches&version=7.8.5"
-      md5: 097d756f8d62de3d07a7332760192be3
+    - name: amq-broker-7.8.6-bin.zip
+      target: amq-broker-7.8.6-bin.zip
+      description: "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?product=jboss.amq.broker&downloadType=patches&version=7.8.6"
+      md5: 01debb4cc1a727f0b942858f7a6c53b0
 execute:
     - script: install.sh
