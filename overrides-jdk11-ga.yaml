@@ -1,0 +1,39 @@
+schema_version: 1
+
+from: "registry.redhat.io/ubi8/ubi:latest"
+name: &name "amq-broker-7/amq-broker-78-openjdk-11-rhel8"
+version: &version "7.8"
+
+labels:
+- name: "com.redhat.component"
+  value: "amq-broker-openjdk-11-rhel8-container"
+
+envs:
+- name: "JBOSS_IMAGE_NAME"
+  value: *name
+- name: "JBOSS_IMAGE_VERSION"
+  value: *version
+
+modules:
+      repositories:
+          - path: modules
+          - name: cct_module
+            git:
+                 url: https://github.com/levivic/cct_module.git
+                 ref: 0.38.0-amq
+
+      install:
+          - name: jboss.container.user
+          - name: jboss.container.openjdk.jdk
+            version: "11"
+          - name: amq.broker78.install
+          - name: amq.broker78.chown
+packages:
+      content_sets_file: content_sets_ubi8.yml
+
+osbs:
+  configuration:
+    container_file: container-z-p.yaml
+  repository:
+    name: containers/amq-broker
+    branch: amq-broker-7.8-openjdk-11-rhel-8
