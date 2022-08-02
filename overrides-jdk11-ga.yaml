@@ -1,6 +1,6 @@
 schema_version: 1
 
-from: "registry.redhat.io/ubi8/ubi:latest"
+from: "registry.redhat.io/ubi8/ubi:8.6-855"
 name: &name "amq-broker-7/amq-broker-78-openjdk-11-rhel8"
 version: &version "7.8"
 
